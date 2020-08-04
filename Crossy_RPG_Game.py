@@ -172,7 +172,7 @@ class GameObject:
 class PlayerCharacter(GameObject):
 
     # How many tiles the character moves per second
-    SPEED = 8
+    SPEED = 7
 
     def __init__(self, image_path, x, y, width, height):
         super().__init__(image_path, x, y, width, height)
@@ -199,14 +199,13 @@ class PlayerCharacter(GameObject):
             return False
         elif self.x_pos + self.width < other_body.x_pos:
             return False
-        
         return True
 
 # Class to represent the enemies moving left to right and right to left
 class NonPlayerCharacter(GameObject):
 
     # How many tiles the character moves per second
-    SPEED = 2
+    SPEED = 3
 
     def __init__(self, image_path, x, y, width, height):
         super().__init__(image_path, x, y, width, height)
